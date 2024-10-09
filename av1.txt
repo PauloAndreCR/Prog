@@ -1,0 +1,265 @@
+Matrizes{
+    leitura
+    escrita
+
+
+
+
+    (soma{
+        int main() {
+    int matrizA[MAX][MAX], matrizB[MAX][MAX], matrizResultado[MAX][MAX];
+    int linhas, colunas;
+
+    // Leitura das dimensões da matriz
+    printf("Digite o número de linhas: ");
+    scanf("%d", &linhas);
+    printf("Digite o número de colunas: ");
+    scanf("%d", &colunas);
+
+    // Leitura da matriz A
+    printf("Digite os elementos da matriz A:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            scanf("%d", &matrizA[i][j]);
+        }
+    }
+
+    // Leitura da matriz B
+    printf("Digite os elementos da matriz B:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            scanf("%d", &matrizB[i][j]);
+        }
+    }
+
+    // Soma das matrizes
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j];
+        }
+    }
+
+    // Impressão do resultado
+    printf("Resultado da soma das matrizes:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            printf("%d ", matrizResultado[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+    })
+
+
+
+    (produto{
+         int main() {
+    int matrizA[MAX][MAX], matrizB[MAX][MAX], matrizResultado[MAX][MAX];
+    int linhasA, colunasA, linhasB, colunasB;
+
+    // Leitura das dimensões da matriz A
+    printf("Digite o número de linhas da matriz A: ");
+    scanf("%d", &linhasA);
+    printf("Digite o número de colunas da matriz A: ");
+    scanf("%d", &colunasA);
+
+    // Leitura da matriz A
+    printf("Digite os elementos da matriz A:\n");
+    for (int i = 0; i < linhasA; i++) {
+        for (int j = 0; j < colunasA; j++) {
+            scanf("%d", &matrizA[i][j]);
+        }
+    }
+
+    // Leitura das dimensões da matriz B
+    printf("Digite o número de linhas da matriz B: ");
+    scanf("%d", &linhasB);
+    printf("Digite o número de colunas da matriz B: ");
+    scanf("%d", &colunasB);
+
+    // Verificação se a multiplicação é possível
+    if (colunasA != linhasB) {
+        printf("Multiplicação impossível: o número de colunas de A deve ser igual ao número de linhas de B.\n");
+        return 1;
+    }
+
+    // Leitura da matriz B
+    printf("Digite os elementos da matriz B:\n");
+    for (int i = 0; i < linhasB; i++) {
+        for (int j = 0; j < colunasB; j++) {
+            scanf("%d", &matrizB[i][j]);
+        }
+    }
+
+    // Inicialização da matriz resultado
+    for (int i = 0; i < linhasA; i++) {
+        for (int j = 0; j < colunasB; j++) {
+            matrizResultado[i][j] = 0; // Inicializa com 0
+        }
+    }
+
+    // Cálculo do produto das matrizes
+    for (int i = 0; i < linhasA; i++) {
+        for (int j = 0; j < colunasB; j++) {
+            for (int k = 0; k < colunasA; k++) {
+                matrizResultado[i][j] += matrizA[i][k] * matrizB[k][j];
+            }
+        }
+    }
+
+    // Impressão do resultado
+    printf("Resultado do produto das matrizes:\n");
+    for (int i = 0; i < linhasA; i++) {
+        for (int j = 0; j < colunasB; j++) {
+            printf("%d ", matrizResultado[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+    })
+
+
+
+
+    (escalar{
+        int main() {
+    int matriz[MAX][MAX];
+    int linhas, colunas;
+    int escalar;
+
+    // Leitura das dimensões da matriz
+    printf("Digite o número de linhas da matriz: ");
+    scanf("%d", &linhas);
+    printf("Digite o número de colunas da matriz: ");
+    scanf("%d", &colunas);
+
+    // Leitura da matriz
+    printf("Digite os elementos da matriz:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Leitura do escalar
+    printf("Digite o valor do escalar: ");
+    scanf("%d", &escalar);
+
+    // Cálculo do produto da matriz pelo escalar
+    printf("Resultado do produto da matriz pelo escalar:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            printf("%d ", matriz[i][j] * escalar);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+    })
+
+
+
+
+    diagonais --->principal
+             |
+             |
+              --->secundária   
+
+    
+    triângulos --->superior
+             |
+             |
+              --->inferior
+
+
+
+
+
+
+    (transposta{
+        int main() {
+    int matriz[MAX][MAX];
+    int transposta[MAX][MAX];
+    int linhas, colunas;
+
+    // Leitura das dimensões da matriz
+    printf("Digite o número de linhas da matriz: ");
+    scanf("%d", &linhas);
+    printf("Digite o número de colunas da matriz: ");
+    scanf("%d", &colunas);
+
+    // Leitura da matriz
+    printf("Digite os elementos da matriz:\n");
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Cálculo da matriz transposta
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++) {
+            transposta[j][i] = matriz[i][j];
+        }
+    }
+
+    // Impressão da matriz transposta
+    printf("Matriz transposta:\n");
+    for (int i = 0; i < colunas; i++) {
+        for (int j = 0; j < linhas; j++) {
+            printf("%d ", transposta[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+    })
+}
+
+
+função{
+    criar
+    chamar
+    retorno --->void
+            |
+            |
+            --->tipo
+    parâmetros
+    assinatura
+    organização
+}
+
+ponteiros{
+    simbologia(*, &, (), {})
+    referência em função
+    vetor -> *(vet+2);
+                vet[2]
+}
+
+
+fgets{
+    sizeOf;
+    stdin;
+ }
+
+
+alocação dinâmica{
+    p = (int *) malloc(5*sizeOf(int));
+    return 0;
+
+    p = realloc(p,10*sizeOf(int));
+
+    free(p);-->vetor ou na matriz
+
+    typecast
+
+    matriz ponteiro para ponteiro
+
+    teste de alocação
+}
