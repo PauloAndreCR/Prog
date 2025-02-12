@@ -1,0 +1,143 @@
+Programa 01 main
+
+package controle;
+
+public class Programa01 {
+	public static void main(String[] args){
+		System.out.println("recebaaaaa!!!!");
+		System.out.print("oi mundo! \nmundaooooo");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Programa 02 variavel
+
+package controle;
+
+public class Programa02 {
+	public static void main(String[] args) {
+		int idade;
+		String nome;
+		float peso;
+		float altura;
+		char sexo;
+		
+		nome="fernanda";
+		idade=12;
+		peso=49.3f;
+		altura=(float)1.96;
+		sexo='F';
+		
+		System.out.println("Dados do paciente");
+		System.out.println("Nome: " + nome);
+		System.out.println("idade: " + idade);
+		System.out.println("peso: " + peso + "Kg");
+		System.out.println("altura: " + altura + "m");
+		System.out.println("sexo: " + sexo);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+Programa 03	variavel dnv 
+
+package controle;
+
+public class Programa03 {
+	public static void main(String[] args){
+		int idade=12;
+		String nome="paulo";
+		float peso=95.4f;
+		float altura=(float)1.95;
+		char sexo='M';
+
+		
+		System.out.println("Dados do paciente");
+		System.out.println("Nome: " + nome);
+		System.out.println("idade: " + idade);
+		System.out.println("peso: " + peso + "Kg");
+		System.out.println("altura: " + altura + "m");
+		System.out.println("sexo: " + sexo);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Programa 04 usuário
+
+Scanner
+
+next():char 
+nextLiner():String
+nextInt():int
+nextfloat():float
+nextDouble():bouble
+nextBoolean():boolean
+
+
+package controle;
+
+import java.util.Scanner;
+
+public class Programa04 {
+	public static void main(String[] args){
+		int idade;
+		String nome;
+		float peso;
+		float altura;
+		char sexo;
+		
+		/*Scanner input;
+		input = new Scanner(System.in);*/
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("CADASTRO DE PACIENTE");
+		System.out.println("Digite um nome: ");
+		nome = input.nextLine();
+		System.out.println("Digite uma idade: ");
+		idade = input.nextInt();
+		System.out.println("Digite um peso: ");
+		peso = input.nextFloat();
+		System.out.println("Digite uma altura: ");
+		altura = input.nextFloat();
+		System.out.println("Qual sexo M ou F: ");
+		sexo = input.next().charAt(0);
+		
+		
+		System.out.println("Nome: " + nome);
+		System.out.println("idade: " + idade);
+		System.out.println("peso: " + peso + "Kg");
+		System.out.println("altura: " + altura + "m");
+		System.out.println("sexo: " + sexo);
+	}
+}
