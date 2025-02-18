@@ -141,3 +141,91 @@ public class Programa04 {
 		System.out.println("sexo: " + sexo);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+Programa05
+
+
+
+
+package aula2;
+
+import java.util.Scanner;
+
+public class aula02 {
+	public static void main(String[] args) {
+		/*Scanner input = new Scanner(System.in);
+		
+		System.out.println("Calculadora de delta");
+		System.out.println("Digite o valor de A: ");
+		int a = input.nextInt();
+		System.out.println("Digite o valor de B: ");
+		int b = input.nextInt();
+		System.out.println("Digite o valor de C: ");
+		int c = input.nextInt();
+		
+		int delta = b*b - 4*a*c;
+		
+		System.out.println("Digite o valor de delta é: " + delta);*/
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Calculadora do raio");
+		System.out.println("Digite o valor do raio:");
+		float r =(float)input.nextDouble();
+		
+		float comprimento = 2*3.14f*r;
+		
+		float area = 4*3.14f*r*r;
+		
+		float volume = 4/3*(3.14f*r*r*r); 
+		
+		System.out.println("O valor do comprimento é: "+ String.format("%.2f", comprimento) + " o valor da área: "+ String.format("%.2f", area) +" o valor do volume: "+ String.format("%.2f", volume));
+	}
+}
+
+
+
+
+
+
+
+
+
+Programa06
+
+
+
+
+
+package aula2;
+
+import java.util.Scanner;
+
+public class programa07 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		float nota, media=0;
+		float qtdpessoa=0;
+		
+		for(int i=0;i<3;i++){
+		System.out.println("digite uma nota: ");
+		nota = input.nextFloat();
+		
+			media += nota;
+			qtdpessoa++;
+		}
+		
+		media = media/qtdpessoa;
+		
+		System.out.println("a media é: "+ media);
+	}
+}
