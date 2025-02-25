@@ -229,3 +229,54 @@ public class programa07 {
 		System.out.println("a media é: "+ media);
 	}
 }
+
+
+
+
+
+
+programa 7
+
+
+
+
+
+package aula3;
+
+import java.util.Scanner;
+
+public class pragrama8 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("digite um numero: ");
+		float n1 = input.nextFloat();
+		System.out.println("digite um numero: ");
+		float n2 = input.nextFloat();
+		
+		System.out.println("Opções são:\n1.media\n2.subtração\n3.produto\n4.divisão");
+		System.out.println("digite a opção");
+		int opcao = input.nextInt();
+		
+		
+		switch(opcao) {
+		case 1:
+			System.out.println("Media = "+ (n1+n2)/2);
+			break;
+		case 2:
+			float r = (n1 < n2)? n2 - n1 : n1 - n2;
+			System.out.println("subtração = "+ r);
+			break;
+		case 3:
+			System.out.println("produto = "+ (n1+n2));
+			break;
+		case 4:
+			System.out.println("divisão = "+ (n1/n2));
+			break;
+			
+		default:
+			System.out.println("Opção invalida!!");
+		}
+	}
+
+}
